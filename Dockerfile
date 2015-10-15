@@ -8,7 +8,7 @@ RUN a2enmod deflate
 
 RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev && rm -rf /var/lib/apt/lists/* \
 	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
-	&& docker-php-ext-install gd
+	&& docker-php-ext-install gd pdo pdo_mysql
 RUN docker-php-ext-install mysqli
 
 CMD ["apache2-foreground"]
