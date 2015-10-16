@@ -1,1 +1,3 @@
-FROM mysql:5.5
+FROM mysql
+
+RUN sed -i 's/,STRICT_TRANS_TABLES//g' /etc/mysql/my.cnf
