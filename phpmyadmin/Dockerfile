@@ -1,0 +1,1 @@
+FROM nazarpc/phpmyadmin
