@@ -12,7 +12,6 @@ RUN apt-get update && apt-get -y install \
 
 COPY php.ini /etc/hhvm/php.ini
 
-ADD ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf
 RUN chmod 640 /etc/ssmtp/ssmtp.conf && \
     chown root:mail /etc/ssmtp/ssmtp.conf
 ADD ssmtp/ssmtp.sh /etc/ssmtp.sh
