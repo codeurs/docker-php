@@ -1,4 +1,5 @@
 FROM php:5.6-apache
+MAINTAINER Ben Merckx
 
 RUN a2enmod rewrite
 RUN a2enmod expires

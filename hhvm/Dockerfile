@@ -1,4 +1,5 @@
 FROM phusion/baseimage:0.9.17
+MAINTAINER Ben Merckx
 
 RUN curl http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
 RUN echo deb http://dl.hhvm.com/ubuntu trusty main | sudo tee /etc/apt/sources.list.d/hhvm.list
