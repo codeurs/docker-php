@@ -12,7 +12,7 @@ require('fs').writeFileSync(__dirname+'/auth', [
 
 jsDAV.createServer({
 	node: "/var/webdav",
-	locksBackend: jsDAV_Locks_Backend_FS.new("/var/webdav"),
+	locksBackend: jsDAV_Locks_Backend_FS.new(__dirname),
 	authBackend:  jsDAV_Auth_Backend_File.new(__dirname+'/auth'),
 	realm: REALM
 }, 80, '0.0.0.0')
