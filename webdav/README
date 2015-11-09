@@ -1,0 +1,13 @@
+Usage (docker-compose):
+
+main: 
+  build: .
+  user: user
+  environment:
+   - USERNAME=user
+   - PASSWORD=password
+  volumes: 
+   - /home/user:/var/webdav
+   - /etc/passwd:/etc/passwd
+  ports:
+   - "80"
