@@ -1,1 +1,1 @@
-Default php environment
+Part of https://github.com/codeurs/dockerfiles
