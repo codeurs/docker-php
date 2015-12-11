@@ -28,4 +28,6 @@ RUN chmod 640 /etc/ssmtp/ssmtp.conf && \
     chown root:mail /etc/ssmtp/ssmtp.conf
 ADD ssmtp/ssmtp.sh /etc/ssmtp.sh
 
+COPY php.ini /usr/local/etc/php/
+
 CMD bash /etc/ssmtp.sh && php-fpm
