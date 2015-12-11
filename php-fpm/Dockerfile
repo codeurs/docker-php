@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng12-dev \
         ssmtp \
-    && docker-php-ext-install iconv mcrypt mysql mysqli curl json mbstring pdo pdo_mysql xml zip dom \
+    && docker-php-ext-install iconv mcrypt mysql mysqli curl json mbstring pdo pdo_mysql xml zip dom soap \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd \
     && rm -rf /var/lib/apt/lists/*
