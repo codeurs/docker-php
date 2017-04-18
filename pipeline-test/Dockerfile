@@ -9,7 +9,7 @@ run apt-get update && apt-get install -y curl git &&\
 	echo "mysql-server-5.5 mysql-server/root_password password codeurs" | debconf-set-selections &&\
 	echo "mysql-server-5.5 mysql-server/root_password_again password codeurs" | debconf-set-selections &&\
 	apt-get update && apt-get install -y --force-yes \
-	mysql-server-5.5 mysql-client yarn
+	mysql-server-5.5 mysql-client yarn php5-cli
 
 workdir /app
 
