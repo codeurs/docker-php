@@ -11,9 +11,6 @@ run apt-get update && apt-get install -y curl git &&\
 	apt-get update && apt-get install -y --force-yes \
 	mysql-server-5.5 mysql-client yarn php5-cli
 
-workdir /app
+run curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# service mysql start
-# mysql -h localhost --user=root --password=codeurs -e "CREATE DATABASE cms_test;"
-# yarn && yarn
-# yarn test
+workdir /app
